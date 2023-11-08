@@ -35,7 +35,7 @@ public class Person implements Serializable {
     private String email;
     @Size(max = 45)
     private String phone;
-    @OneToMany(mappedBy = "person")
+    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private List<User> userList;
 
     public Person() {
